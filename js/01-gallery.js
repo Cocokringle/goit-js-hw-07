@@ -44,12 +44,13 @@ function modal(originalImg) {
     <img src="${originalImg}" width="800" height="600">
     `)
     instance.show()
-
+    
     function onEscKeyPress(evt) {
-
-    instance.close(() => console.log('lightbox not visible anymore'))
+        if (evt.code === 'Escape') {
+      instance.close()  
+    }    
 
     }
-    
+
 }
 
